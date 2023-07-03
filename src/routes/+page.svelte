@@ -14,7 +14,7 @@
     });
 </script>
 
-<div>
+<div class="app">
     {#each files as file}
         <MarkDown file={file} />
     {/each}
