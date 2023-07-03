@@ -1,13 +1,14 @@
 <script lang="ts">
     import {onMount} from "svelte";
-    import {Prism} from "../prism.js";
-    import {browser} from "$app/env"
     import {GetFilePathOnServer} from "../util";
+    import {marked} from "marked";
+    import {markedHighlight} from "marked-highlight";
+    import hljs from 'highlight.js';
 
     export let file = undefined;
     let markdown_content = "";
 
-    function GetMarkDownPath(file: String): String | URL {
+    function GetMarkDownPath(file: String): String | URL | undefined {
         if (file === undefined) {
             return undefined;
         }
@@ -32,19 +33,24 @@
         console.log(file);
         const markdown_file = await LoadMarkdown(GetMarkDownPath(file));
 
-        marked.setOptions({
-            highlight: (code, lang) => {
-                if (Prism.languages[lang]) {
-                    return Prism.highlight(code, Prism.languages[lang], lang);
-                } else {
-                    return code;
-                }
+        marked.use(markedHighlight({
+            langprefix: 'hljs language-',
+            highlight: function (code, lang) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
             }
-        })
-        markdown_content = DOMPurify.sanitize(marked.parse(markdown_file));
+        }));
+        markdown_content = marked.parse(markdown_file);
+        console.log(markdown_content)
     });
 </script>
 
 <div id={`md-${file}`}>
     {@html markdown_content}
 </div>
+
+<style>
+    code {
+        background: grey;
+    }
+</style>
