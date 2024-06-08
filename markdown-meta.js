@@ -7,22 +7,20 @@ import path from 'path';
  * @returns {Array<string>}
  */
 function getAllFilesSync(dir, fileList = []) {
-    const files = fs.readdirSync(dir); // Read the contents of the directory
+    const files = fs.readdirSync(dir);
 
     files.forEach((file) => {
-        const filePath = path.join(dir, file); // Create the full path of the file/folder
-        const stat = fs.statSync(filePath); // Get the status of the file/folder
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
 
         if (stat.isDirectory()) {
-            // If it's a directory, recursively call getAllFilesSync
             getAllFilesSync(filePath, fileList);
-        } else {
-            // If it's a file, push the file path to the fileList
-            fileList.push(filePath);
+        } else if (file.endsWith('.md')) {
+            fileList.push(file);
         }
     });
 
-    return fileList; // Return the accumulated file paths
+    return fileList;
 }
 
 export function generateMDMeta() {
