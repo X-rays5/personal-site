@@ -5,7 +5,7 @@
     import {markedHighlight} from "marked-highlight";
     import hljs from 'highlight.js';
 
-    export let file = undefined;
+    export let file: string | undefined = undefined;
     let markdown_content = "";
 
     function GetMarkDownPath(file: String): String | URL | undefined {
