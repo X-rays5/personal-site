@@ -1,4 +1,4 @@
-# Site index
+# Site index:
 * [Walking schedule](https://api.walking-schedule.scheenen.dev): A dog walking schedule app. Source located at [X-rays5/walking_schedule](https://github.com/X-rays5/walking_schedule).
 * [Dutch Inflation](https://dutch-inflation.scheenen.dev): A graph with the inflation trend in the netherlands since 1900 using CBS opendata. Currently closed source.
 * [Github Stats](https://github-stats.scheenen.dev): Self hosted instance of [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats).
