@@ -5,4 +5,4 @@
 * [NativeDB](https://nativedb.scheenen.dev): Fork of [DottieDot/GTAV-NativeDB](https://github.com/DottieDot/GTAV-NativeDB) with some modifications made. Source located at [X-rays5/GTAV-NativeDB](https://github.com/X-rays5/GTAV-NativeDB).
 * [Robot Car](https://robot-car.scheenen.dev): Web control panel for ELEGOO smart robot car kit 3.0. Source located at [X-rays5/robot_car](https://github.com/X-rays5/robot_car).
 * [URL shortener](https://short.scheenen.dev): A URL shortener made using a rust Cloudflare Worker. Source located at [X-rays5/url_shortener](https://github.com/X-rays5/url_shortener).
-* [War Thunder API](https://wt.scheenen.dev): A API which fetches all vehicles in War Thunder from the games' wiki. Source located at [X-rays5/wt-api](https://github.com/X-rays5/wt-api).
+* [War Thunder API](https://api.wt.scheenen.dev): A API which fetches all vehicles in War Thunder from the games' wiki. Source located at [X-rays5/wt-api](https://github.com/X-rays5/wt-api).
