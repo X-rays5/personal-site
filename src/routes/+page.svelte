@@ -44,6 +44,6 @@
     {/each}
 
     <div id="footer">
-        <p>The content of this site is provided by markdown files! Check it out on <a href="https://github.com/X-rays5/personal-site"><img src={githubLogo} alt="Github logo"/> Github.</a></p>
+        <p>The content of this site is provided by markdown files! Check it out on <a href="https://github.com/X-rays5/personal-site"><img src={githubLogo} alt="Github logo"/> Github.</a> <a href="https://status.scheenen.dev">Status of services</a></p>
     </div>
 </div>
