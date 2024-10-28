@@ -1,6 +1,6 @@
 import {browser} from "$app/environment"
 
-export function GetFilePathOnServer(path: String): string | URL {
+export function GetFilePathOnServer(path: string): string | URL {
     let url;
     if (browser) {
         url = new URL(`/${path}`, window.location.href);
